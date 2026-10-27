@@ -15,4 +15,9 @@ def email_split(email):
     print('Domain:',mail)
 
 email = input('Email: ')
-email_split(email)
+
+if('@'in email and email.index('@')-1 >= 0 and email.index('@')+1 < len(email)):
+    email_split(email)
+    # print(email.index('@'))
+else:
+    print('Invalid email')
